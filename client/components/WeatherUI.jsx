@@ -22,6 +22,17 @@ class WeatherUI extends React.Component {
   componentWillReceiveProps(nextProp){
      this.setState({data:nextProp.data});
   }
+  card(data){
+    let cards = [], j=0;;
+    const cardNumbers = data.list &&( data.list.length/8);
+    const averageDataLength = data.list && (data.list.length%8);
+    for(let i =0;i<5;i++){
+       cards.push(<DetailCard data={data.list && data.list[j]}/>);
+       j=j+8;
+
+    }
+    return cards;
+  }
 
   render() {
     console.log(this.props.data);
@@ -37,7 +48,7 @@ class WeatherUI extends React.Component {
                 </div>
             </div>
           </div>
-          <DetailCard/>
+         {this.card(this.state.data)}
         </div>
        );
   }
@@ -45,7 +56,7 @@ class WeatherUI extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    data: state
+    data: state.data
   }
 }
 
