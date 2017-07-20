@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
     console.log(this.state.clicked);
     return (
-     <div style={{textAlign: 'center'}}>
+     <div className='weatherUI'>
         <h1>Click:{this.state.clicked} </h1>
         <button onClick={this.props.onTodoClick}>Click Me</button>
         <WeatherUI/>
