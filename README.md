@@ -13,6 +13,6 @@ URL : http://weather-forbuildit.herokuapp.com/
 
 Catch is Please use http instead of https , since open weather api serves content over http.
 
-TODO : 1) Responsive , so that we can easily access over any device.
+TODO : 1) Responsive , so that we can easily access over any device.                                                                  
        2) Search using Speak  , yeah Speech Recognition.
        3) Accuracy using algorithims.
