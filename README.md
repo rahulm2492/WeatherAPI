@@ -2,9 +2,9 @@
 This is the DEMO Weather Forecast App.
 Steps to Develope and Contribute :
 
-npm install 
-npm run dev for Developement Mode providing sytatic sugar for Hot MOdule Reloading.
-npm run tdd for running unit test while developing module.
+npm install                                                       
+npm run dev for Developement Mode providing sytatic sugar for Hot Module Reloading.                                       
+npm run tdd for running unit test while developing module.                                                         
 npm run test for unit testing.
 npm run build for making build and deploy.
 
