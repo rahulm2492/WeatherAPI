@@ -6,13 +6,7 @@ $target-width: 320px;
     background-repeat: no-repeat;
     background-size:cover;
     min-height: 100vh;
-    
-    @media screen and (max-width :350px) {
-    body{
-      background-size:none;
-      background-color: white;
-    }
-    }
+
     .weatherUI {
         position:relative;
         .center-align{
