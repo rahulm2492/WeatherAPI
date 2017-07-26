@@ -53,7 +53,7 @@ class WeatherUI extends React.Component {
        return (
         <div className="row margin-zero">
           {this.props.loading ? (<div className="loader"/>) :null}
-          <div className="col-xs-6 col-md-4 center-align">
+          <div className="col-xs-12 col-md-4 center-align">
             <h3 className='heading_color'>Select Search Type</h3>
             <label className="radio-inline">
               <input type="radio" value='city_name' onClick={this.getRadioInput} name="optradio" className="radio_pos" defaultChecked={true}/>City Name
