@@ -1,8 +1,11 @@
 import React from 'react';
 import DetailCard from './DetailCard.jsx';
+import Speech from './Speech.jsx';
 import {getCountryFromZip, byName, onSearch} from '../actions';
 import {connect} from 'react-redux';
 import logo from "../loader.gif";
+import micSource from '../mic.gif';
+import micStart from '../mic-animate.gif';
 class WeatherUI extends React.Component {
   constructor(props){
     super(props);
@@ -10,6 +13,7 @@ class WeatherUI extends React.Component {
     this.setName=this.setName.bind(this);
     this.getData=this.getData.bind(this);
     this.getRadioInput=this.getRadioInput.bind(this);
+    this.getSpeechData = this.getSpeechData.bind(this);
   }
 
   setName(e){
@@ -23,7 +27,10 @@ class WeatherUI extends React.Component {
       this.props.onName(this.state.cityName);
       }
   }
-
+  getSpeechData(name){
+    this.setState({cityName:name});
+    this.props.onName(name);
+  }
   componentWillReceiveProps(nextProp){
      this.setState({data:nextProp.data});
   }
@@ -62,13 +69,15 @@ class WeatherUI extends React.Component {
               <input type="radio" value='zip_code' onClick={this.getRadioInput} className="radio_pos" name="optradio"/>ZipCode
             </label>
             <div className="input-group">
-                <input type="text" className="form-control" placeholder="Search" id="txtSearch" onChange={this.setName} onKeyPress={this.getData}/>
+                <input type="text" className="form-control" placeholder="Search" id="txtSearch" onChange={this.setName} onKeyPress={this.getData} value={this.state.cityName}/>
                 <div className="input-group-btn" >
-                      <button className="btn btn-primary" onClick={this.getData}>
-                      <span className="glyphicon glyphicon-search"></span>
+                      <button className="btn btn-primary speechButton" onClick={this.getData}>
+                      {/*<span className="glyphicon glyphicon-search"></span>*/}
+                      <Speech getSpeech ={this.getSpeechData}/>
                       </button>
                 </div>
             </div>
+            
           </div>
            {this.state.data ?<h3 className='center-align report-heading'>Weather Report For {city && city.name}, {city && city.country}</h3>: null}
          <div className='cards-container'>{this.state.data && this.card(this.state.data)}</div>
