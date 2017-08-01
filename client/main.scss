@@ -13,6 +13,13 @@ $target-width: 320px;
             margin: 0 auto;
             float:none;
             text-align: center;
+
+        }
+        .speechMic{
+            width:31px;
+        }
+        .speechButton{
+         padding: 0;
         }
         .loader{
              background: url('./loader.gif');
