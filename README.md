@@ -15,7 +15,7 @@ npm run build for making build and deploy.
 
 This app is hosted on heroku.com               
 Prdocution URL : http://weather-forbuildit.herokuapp.com/       
-DEV URL : https://weatherbuild.herokuapp.com/
+DEV URL : http://weatherbuild.herokuapp.com/
 
 Catch is Please use http instead of https , since open weather api serves content over http.                                          
 TODO :
