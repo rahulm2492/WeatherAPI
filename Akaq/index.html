@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  <link rel="stylesheet" href="./style.css" type="text/css">
+   <script src="func.js"></script>
+  </head>
+  <body>
+      <div class="container">
+           <div>
+            <table>
+                <tr>
+                    <th>Produt</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Cost</th>
+                </tr>
+                <tr>
+                    <td>Cotton T-Shirt, Medium</td>
+                    <td>$1.99</td>
+                    <td><input type="text" id = 'obj1Text'>
+                        <div>
+                            <button class = 'plus' onclick="increment('obj1')"> </button>
+                            <button class = 'minus' onclick="decrement('obj1')"></button>
+                        </div>   
+                    </td>
+                    <td id ='obj1List'></td>
+                </tr>
+                <tr>
+                    <td>Baseball Cap, One Size</td>
+                    <td>$2.99</td>
+                    <td><input type="text" id = 'obj2Text'>
+                        <div>
+                            <button class = 'plus' onclick="increment('obj2')"> </button>
+                            <button class = 'minus' onclick="decrement('obj2')"></button>
+                        </div>  
+                    </td>
+                    <td id ='obj2List'></td>
+                </tr>
+                <tr>
+                    <td>Swim Shorts, Medium</td>
+                    <td>$3.99</td>
+                    <td><input type="text" id = 'obj3Text'>
+                    <div>
+                            <button class = 'plus' onclick="increment('obj3')"> </button>
+                            <button class = 'minus' onclick="decrement('obj3')"></button>
+                    </div>  
+                    </td>
+                    <td id ='obj3List'></td>
+                </tr>
+            </table>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>    
+          </div>
+          <footer>
+              <p class = 'upper_footer'><span>Subtotal</span><span>$11.96</span></p>
+              <p class = 'upper_footer'><span>VAT @ 20%</span><span>$2.39</span></p>
+              <p class = 'upper_footer'><span>Total Cost</span><span>$2.39</span></p>
+          </footer>   
+      </div>
+  </body>
+</html>
