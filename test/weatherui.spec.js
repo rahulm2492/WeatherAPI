@@ -14,6 +14,7 @@ describe('Weather UI', () => {
     store = mockStore();
     fetchMock.get('*', {hello: 'world'});
     
+    
   });
  
 

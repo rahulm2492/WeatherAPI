@@ -1,0 +1,23 @@
+@import url("reset.css");
+
+
+.container{
+    margin: 0 auto;
+    width: 70%;
+}
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 1px 1.732px 1px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    float:left
+}
+.sub-heading {
+    clear: both;
+    font-size: 14px;
+    font-family: "DroidSerif";
+}
+
+td:nth-of-type(1) {
+  color: lime;
+}

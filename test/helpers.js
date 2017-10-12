@@ -1,4 +1,4 @@
-require('whatwg-fetch');
+
 import { expect } from 'chai';
 import { sinon, spy } from 'sinon';
 import { mount, render, shallow } from 'enzyme';
@@ -9,3 +9,5 @@ global.spy = spy;
 global.mount = mount;
 global.render = render;
 global.shallow = shallow;
+global.webkitSpeechGrammarList = function webkitSpeechGrammarList(){ return {addFromString: function(){}}};
+global.webkitSpeechRecognition = function webkitSpeechRecognition(){}

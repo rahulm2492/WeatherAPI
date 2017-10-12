@@ -1,3 +1,4 @@
+require('babel-register')();
 var jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 

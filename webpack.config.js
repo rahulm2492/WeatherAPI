@@ -15,7 +15,8 @@ module.exports = {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.(jpg|png|svg|gif)$/, loader: 'url-loader'},
+      { test: /\.(jpg|png|svg|gif)$/, loader: ['file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+      'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false']},
       { test: /\.scss$/,loaders: ['style-loader', 'css-loader', 'sass-loader'] }
       
     ],
